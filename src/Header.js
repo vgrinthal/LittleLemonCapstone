@@ -4,9 +4,11 @@ import "./App.css";
 export default function Header() {
     return (
         <header className="Header">
-            <nav>
-            <img src="/icons_assets/Logo.svg" alt="Little Lemon Logo" />
-            <div id="nav-menu">
+            <meta name="description" content="Website for the Little Lemon restaraunt franchise based in Chicago, IL."></meta>
+            <meta name="og:title" content="Little Lemon Restaraunt"></meta>
+            <nav className="nav-menu">
+            <div>
+                <img src="/icons_assets/Logo.svg" alt="Little Lemon Logo" />
                 <ul>
                     <li><NavLink to="/" className="home-link">Home</NavLink></li>
                     <li><NavLink to="/#about" className="about-link">About</NavLink></li>
@@ -15,6 +17,7 @@ export default function Header() {
                     <li><NavLink to="/order-online" className="order-online-link">Order Online</NavLink></li>
                     <li><NavLink to="/login" className="login-link">Login</NavLink></li>
                 </ul>
+                <img src="/icons_assets/hamburger.svg" alt="collapse-menu"/>
             </div>
             </nav>
         </header>

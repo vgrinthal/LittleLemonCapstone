@@ -3,9 +3,9 @@ import "./App.css";
 
 export default function Footer() {
     return (
-        <footer className="Footer" color="#49SE57">
+        <footer className="Footer">
            <nav>
-            <div id="nav-menu">
+            <div className="footer-column">
                 <b>Little Lemon</b>
                 <ul>
                     <li><NavLink to="/" className="home-link">Home</NavLink></li>
@@ -17,20 +17,20 @@ export default function Footer() {
                 </ul>
             </div>
             </nav>
-            <div id="contact-us">
+            <div className="footer-column">
                 <b>Contact Us</b>
                 <p>123 Sesame St., Chicago, IL, 12345<br />
                 (123) 456-7890<br />
                 contact@littlelemon.com</p>
             </div>
-            <div id="social-links">
+            <div className="footer-column">
                 <b>Find Us On:</b>
                 <ul>
-                    <li><a href="https://www.facebook.com">Facebook</a></li>
-                    <li><a href="https://www.x.com">X</a></li>
-                    <li><a href="https://www.instagram.com">Instagram</a></li>
-                    <li><a href="https://www.tiktok.com">TikTok</a></li>
-                    <li><a href="https://www.youtube.com">YouTube</a></li>
+                    <li><a href="https://www.facebook.com" alt="Facebook">Facebook</a></li>
+                    <li><a href="https://www.x.com" alt="X">X</a></li>
+                    <li><a href="https://www.instagram.com" alt="Instagram">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com" alt="TikTok">TikTok</a></li>
+                    <li><a href="https://www.youtube.com" alt="YouTube">YouTube</a></li>
                 </ul>
             </div>
         </footer>

@@ -13,14 +13,14 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Header {
+  background-color: #ffffff;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1vmin);
   color: white;
 }
 
@@ -35,4 +35,27 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#nav-menu > li {
+  list-style-type: none;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Markazi Text", serif;
+}
+
+#nav-menu > li > a:link {
+  color: #495749;
+}
+
+#nav-menu > li > a:hover, a:active {
+  color: #f4ce14;
+}
+
+#nav-menu > li > a:visited {
+  color: #b790d0;
+}
+
+.Footer {
+  background-color: #495749;
 }
