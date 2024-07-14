@@ -4,8 +4,12 @@ import "./App.css";
 export default function Footer() {
     return (
         <footer className="Footer">
-           <nav>
+            <div>
             <div className="footer-column">
+            <img src="/icons_assets/Logo.svg" alt="Little Lemon Logo" />
+            </div>
+            <div className="footer-column">
+            <nav>
                 <b>Little Lemon</b>
                 <ul>
                     <li><NavLink to="/" className="home-link">Home</NavLink></li>
@@ -15,8 +19,8 @@ export default function Footer() {
                     <li><NavLink to="/order-online" className="order-online-link">Order Online</NavLink></li>
                     <li><NavLink to="/login" className="login-link">Login</NavLink></li>
                 </ul>
-            </div>
             </nav>
+            </div>
             <div className="footer-column">
                 <b>Contact Us</b>
                 <p>123 Sesame St., Chicago, IL, 12345<br />
@@ -32,6 +36,7 @@ export default function Footer() {
                     <li><a href="https://www.tiktok.com" alt="TikTok">TikTok</a></li>
                     <li><a href="https://www.youtube.com" alt="YouTube">YouTube</a></li>
                 </ul>
+            </div>
             </div>
         </footer>
     );

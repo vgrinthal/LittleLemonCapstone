@@ -37,25 +37,44 @@
   }
 }
 
-#nav-menu > li {
-  list-style-type: none;
+.nav-menu > ul {
   text-decoration: none;
   text-align: center;
   font-family: "Markazi Text", serif;
+  list-style: none;
 }
 
-#nav-menu > li > a:link {
+.nav-menu > ul > li > a:link {
   color: #495749;
+  text-decoration: none;
 }
 
-#nav-menu > li > a:hover, a:active {
+.footer-column > ul > li > a:link {
+  color: white;
+  text-decoration: none;
+}
+
+ul > li > a:hover {
   color: #f4ce14;
+  text-decoration: none;
 }
 
-#nav-menu > li > a:visited {
-  color: #b790d0;
+ul > li > a:visited {
+  color: #9169a9;
+  text-decoration: none;
 }
 
 .Footer {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer-column {
+  color: #ffffff;
   background-color: #495749;
+  padding: 10px 30px;
+  margin-left: 2px;
 }
