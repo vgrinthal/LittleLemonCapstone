@@ -15,13 +15,18 @@
 
 .Header {
   background-color: #ffffff;
-  min-height: 30vh;
+  min-height: 10vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: space-between;
   font-size: calc(10px + 1vmin);
   color: white;
+  top: 0;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 3px 3px -3px rgba(0,0,0,.2);
 }
 
 .App-link {
@@ -37,44 +42,96 @@
   }
 }
 
+
 .nav-menu > ul {
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
-  text-align: center;
+  align-content: center;
   font-family: "Markazi Text", serif;
-  list-style: none;
+  list-style-type: none;
+  color: white;
+  overflow-x: hidden;
+}
+
+#logo {
+  padding: 30px 10%;
+
+}
+
+#icon {
+  float: center;
+  padding-right: 10%;
+}
+
+#menu {
+  display: flex;
+  justify-content: space-between;
+  align-content: left;
+  font-size: calc(10px + 1vmin);
 }
 
 .nav-menu > ul > li > a:link {
   color: #495749;
-  text-decoration: none;
 }
 
 .footer-column > ul > li > a:link {
   color: white;
-  text-decoration: none;
 }
 
 ul > li > a:hover {
   color: #f4ce14;
-  text-decoration: none;
 }
 
 ul > li > a:visited {
   color: #9169a9;
-  text-decoration: none;
 }
 
 .Footer {
-  list-style-type: none;
   display: flex;
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
+  bottom: 0;
+  position: absolute;
+  background-color: #495749;
+  font-size: small;
 }
 
 .footer-column {
   color: #ffffff;
+  float: left;
   background-color: #495749;
-  padding: 10px 30px;
-  margin-left: 2px;
+  justify-content: space-between;
+  width: 25%;
+  padding-top: 3%;
+  height: 10%;
+  list-style-type: none;
+}
+.footer-column > ul {
+  list-style-type: none;
+  text-align: left;
+}
+
+.footer-column > nav > ul {
+  list-style-type: none;
+  text-align: left;
+}
+@media screen and (max-width: 600px) {
+
+  .Header{
+    background-color: #ffffff;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 1vmin);
+    color: white;
+  }
+
+  .footer-column > img {
+    float: center;
+    padding:30% 5%;
+  }
 }

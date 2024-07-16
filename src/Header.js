@@ -7,17 +7,17 @@ export default function Header() {
             <meta name="description" content="Website for the Little Lemon restaraunt franchise based in Chicago, IL."></meta>
             <meta name="og:title" content="Little Lemon Restaraunt"></meta>
             <nav className="nav-menu">
-            <div>
-                <img src="/icons_assets/Logo.svg" alt="Little Lemon Logo" />
+            <div id="menu">
+                <img id="logo" src="/icons_assets/Logo.svg" alt="Little Lemon Logo" />
                 <ul>
-                    <li><NavLink to="/" className="home-link">Home</NavLink></li>
-                    <li><NavLink to="/#about" className="about-link">About</NavLink></li>
-                    <li><NavLink to="/menu" className="menu-link">Menu</NavLink></li>
-                    <li><NavLink to="/reservations" className="reservations-link">Reservations</NavLink></li>
-                    <li><NavLink to="/order-online" className="order-online-link">Order Online</NavLink></li>
-                    <li><NavLink to="/login" className="login-link">Login</NavLink></li>
+                    <li className="nav-link"><NavLink to="/" className="home-link">Home</NavLink></li>
+                    <li className="nav-link"><NavLink to="/#about" className="about-link">About</NavLink></li>
+                    <li className="nav-link"><NavLink to="/menu" className="menu-link">Menu</NavLink></li>
+                    <li className="nav-link"><NavLink to="/reservations" className="reservations-link">Reservations</NavLink></li>
+                    <li className="nav-link"><NavLink to="/order-online" className="order-online-link">Order Online</NavLink></li>
+                    <li className="nav-link"><NavLink to="/login" className="login-link">Login</NavLink></li>
                 </ul>
-                <img src="/icons_assets/hamburger.svg" alt="collapse-menu"/>
+                <img id="icon" src="/icons_assets/hamburger.svg" alt="collapse-menu"/>
             </div>
             </nav>
         </header>
