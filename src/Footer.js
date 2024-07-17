@@ -6,11 +6,11 @@ export default function Footer() {
         <footer className="Footer">
             <div>
             <div className="footer-column">
-            <img src="/icons_assets/Logo.svg" alt="Little Lemon Logo" />
+            <img id="footer-logo" src="/icons_assets/Logo.svg" alt="Little Lemon Logo" />
             </div>
             <div className="footer-column">
             <nav>
-                <b>Little Lemon</b>
+                <p><b>Site Map</b></p>
                 <ul>
                     <li><NavLink to="/" className="home-link">Home</NavLink></li>
                     <li><NavLink to="/#about" className="about-link">About</NavLink></li>
@@ -22,13 +22,14 @@ export default function Footer() {
             </nav>
             </div>
             <div className="footer-column">
-                <b>Contact Us</b>
-                <p>123 Sesame St., Chicago, IL, 12345<br />
+                <p><b>Contact Us</b></p>
+                <p>123 Sesame St.<br />
+                Chicago, IL, 12345<br />
                 (123) 456-7890<br />
                 contact@littlelemon.com</p>
             </div>
             <div className="footer-column">
-                <b>Find Us On:</b>
+                <p><b>Find Us On</b></p>
                 <ul>
                     <li><a href="https://www.facebook.com" alt="Facebook">Facebook</a></li>
                     <li><a href="https://www.x.com" alt="X">X</a></li>
