@@ -15,10 +15,11 @@
 
 .Header {
   background-color: #ffffff;
-  min-height: 10vh;
-  font-size: calc(10px + .5vmin);
+  min-height: 10vh !important;
+  font-size: calc(10px + 2vmin);
   top: 0;
   text-decoration: none;
+  vertical-align: text-bottom;
   box-shadow: 0 3px 3px -3px rgba(0,0,0,.2);
   overflow-x: hidden;
 }
@@ -44,15 +45,21 @@
 
 #logo {
   padding: 5px 5%;
-  width: 20vw;
-
+  min-width: 20%;
+  width: 15vw;
 }
 
 #icon {
   visibility: hidden;
-  float: right;
   padding-right: 5%;
-  width: 10%;
+  width: 5%;
+  fill: #495749;
+}
+
+#shop {
+  padding-right: 5%;
+  width: 5%;
+  fill: #495749;
 }
 
 #menu  {
@@ -60,21 +67,30 @@
   flex-wrap: wrap;
   text-decoration: none;
   padding: 10px 2vh;
-  align-content: center;
   font-size: calc(10px + 1vmin);
   width: 100%;
+  align-items: center;
+  align-self: center;
+  overflow: hidden;
+}
+
+#menu > ul {
+  flex-grow: 1;
 }
 
 #menu > ul > li {
   display: inline;
   margin-inline: 1vw;
   align-self: center;
+  font-size: calc(10px + .5vmin);
 }
 
 ul, li {
   margin: 0;
   padding-left: 0;
   list-style: none;
+  font-size: calc(10px + 1vmin);
+
 }
 
 .nav-menu > ul > li > a:link {
@@ -137,12 +153,12 @@ ul > li > a:visited {
 
   .Header{
     background-color: #ffffff;
-    min-height: 10vh;
+    min-height: 10vh !important;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 1vmin);
-    color: white;
+    overflow: hidden;
   }
 
   .footer-column > img {
@@ -159,6 +175,12 @@ ul > li > a:visited {
     padding-right: 5%;
     padding-bottom: 5%;
     visibility: visible;
+    fill: #495749;
   }
+
+  #shop {
+    visibility: hidden;
+  }
+
 }
 

@@ -18,6 +18,7 @@ export default function Header() {
                     <li className="nav-link"><NavLink to="/login" className="login-link">Login</NavLink></li>
                 </ul>
                 <img id="icon" src="/icons_assets/hamburger.svg" alt="collapse-menu"/>
+                <img id="shop" src="/icons_assets/Basket.svg" alt="shop-icon" />
             </div>
             </nav>
         </header>
