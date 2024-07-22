@@ -1,0 +1,19 @@
+form {
+    overflow-y: hidden;
+}
+
+form > h1 {
+    text-align: center;
+    color: #495749;
+}
+
+.form-field {
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+form > button {
+    align-self: center;
+    color: #495749;
+    padding: 2px;
+}
