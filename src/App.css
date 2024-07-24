@@ -85,6 +85,7 @@
   margin-inline: 1vw;
   align-self: center;
   font-size: calc(10px + .5vmin);
+  align-content: center;
 }
 
 ul, li {

@@ -1,5 +1,6 @@
 form {
     overflow-y: hidden;
+    display: grid;
 }
 
 form > h1 {
@@ -12,8 +13,14 @@ form > h1 {
     padding-bottom: 5%;
 }
 
-form > button {
-    align-self: center;
-    color: #495749;
-    padding: 2px;
+#continue {
+    background-color: #495749;
+    padding: 2px 10px;
+    margin-bottom: 2% ;
+    color: white;
+    border-color: white;
+    width: 20%;
+    justify-self: center;
 }
+
+

@@ -1,37 +1,49 @@
 import React, {useReducer} from 'react';
-import DateTimePicker from 'react-datetime-picker';
 import './Reservations.css';
 
 export default function ReserveForm() {
     const atStart = ({
         location: 1,
-        DateTimePicker: null,
+        DateTimePicker: "",
         partySize: 1,
-        seating: true,
-        comment: "",
+        seating: null,
         firstName: "",
         email: "",
         phoneNumber: "",
+        comment: "",
     });
 
-const reducer = (state = atStart, { type, payload }) => {
-  switch (type) {
-
-  case 'handleEntry':
-    return { ...state, ...payload  }
-
+const reducer = (state = atStart, action) => {
+  switch (action.type) {
+  case "location":
+    return {...state, location: action.payload};
+  case "datetime":
+    return {...state, datetime: action.payload};
+  case "number":
+    return {...state, party: action.payload};
+  case "radio":
+    return {...state, indoors: action.payload};
+  case "firstName":
+    return {...state, firstName: action.payload};
+  case "email":
+    return {...state, email: action.payload};
+  case "phoneNumber":
+    return {...state, phoneNumber: action.payload};
+  case "textarea":
+    return {...state, comment: action.payload};
   default:
-    return atStart;
+    return Error("Sorry, there seems to be an error with our form. Please call your local Little Lemon for reservation details.");
   }
-}
-
-const handleEntry = (e) => {
-    dispatch({type: 'input', payload: e.currentValue.value});
 };
 
-const [seating, toggleSeating] = useReducer((state) => {
-    return !state;
-}, false);
+function handleChange(event) {
+    dispatch({type: 'input', payload: event.target.value});
+};
+
+function handleSubmit(event) {
+  event.preventDefault();
+  return <p>"Your Reservation: " + {showValues}</p>;
+}
 
 const [showValues, dispatch] = useReducer(reducer, atStart);
 
@@ -43,7 +55,7 @@ return (
             <select
                 name="location"
                 value={showValues.location}
-                onChange={handleEntry}
+                onChange={handleChange}
                 defaultValue="select your location:">
                 <option id="1">123 Sesame St., Chicago, IL, 23456</option>
                 <option id="2">100 Capulet Dr., New York, NY, 10012</option>
@@ -53,41 +65,78 @@ return (
             </div>
             <div className="form-field">
                <label>Select a Date and Time:<br />
-               <DateTimePicker
+               <input
+                type="datetime-local"
+                format={"dd-MMMM | hh:mm a"}
                 name="datetime"
-                onChange={handleEntry}
+                onChange={handleChange}
                 value={showValues.datetime} />
                </label>
             </div>
             <div className="form-field">
                 <label>Party Size (including children):< br />
                 <input
+                    name="party"
                     type="number"
                     min="1"
                     max="15"
-                    onChange={handleEntry}
+                    onChange={handleChange}
                     value={showValues.partySize}
                     placeholder= "2" />
-
                 </label>
             </div>
             <div className="form-field">
             <label>Would you prefer indoor seating?< br />
-                <button
-                onClick={toggleSeating}
-                value={showValues.seating}>
-                {seating ? "Yes, please!" : "Either is fine"}</button>
+                <input
+                name="indoors"
+                type="radio"
+                onChange={handleChange}
+                value={showValues.seating === true}
+                />Yes, please!<br />
+                <input
+                name="indoors"
+                type="radio"
+                onChange={handleChange}
+                value={showValues.seating === false}
+                />Either is fine.
                 </label></div>
+                <div className="form-field">
+                <label>First Name:<br />
+                <input
+                    type="text"
+                    name="firstName"
+                    onChange={handleChange}
+                    value={showValues.firstName} />
+                </label>
+            </div>
+            <div className="form-field">
+                <label>Email Address:<br />
+                <input
+                    type="text"
+                    name="email"
+                    onChange={handleChange}
+                    value={showValues.email} />
+                </label>
+            </div>
+            <div className="form-field">
+                <label>Phone Number:<br />
+                <input
+                    type="text"
+                    name="phoneNumber"
+                    onChange={handleChange}
+                    value={showValues.phoneNumber} />
+                </label>
+            </div>
             <div className="form-field">
                 <label>Special Directions:<br />
                 <textarea
                     type="textarea"
                     name="comment"
-                    onChange={handleEntry}
+                    onChange={handleChange}
                     value={showValues.comment} />
                 </label>
             </div>
-            <button>Continue</button>
+            <button type="submit" id="continue" onClick={handleSubmit}>Continue</button>
         </form>
     )
 }
