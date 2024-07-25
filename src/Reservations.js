@@ -1,5 +1,6 @@
 import React, {useReducer} from 'react';
 import './Reservations.css';
+import confirm from './ConfirmReserve.js';
 
 export default function ReserveForm() {
     const atStart = ({
@@ -41,9 +42,9 @@ function handleChange(event) {
 };
 
 function handleSubmit(event) {
-  event.preventDefault();
-  return <p>"Your Reservation: " + {showValues}</p>;
-}
+  event.preventDefault()
+  return confirm(event);
+};
 
 const [showValues, dispatch] = useReducer(reducer, atStart);
 
@@ -106,7 +107,8 @@ return (
                     type="text"
                     name="firstName"
                     onChange={handleChange}
-                    value={showValues.firstName} />
+                    value={showValues.firstName}
+                    placeholder="John" />
                 </label>
             </div>
             <div className="form-field">
@@ -115,7 +117,8 @@ return (
                     type="text"
                     name="email"
                     onChange={handleChange}
-                    value={showValues.email} />
+                    value={showValues.email}
+                    placeholder="email@email.com" />
                 </label>
             </div>
             <div className="form-field">
@@ -124,7 +127,8 @@ return (
                     type="text"
                     name="phoneNumber"
                     onChange={handleChange}
-                    value={showValues.phoneNumber} />
+                    value={showValues.phoneNumber}
+                    placeholder="(123) 456-7890" />
                 </label>
             </div>
             <div className="form-field">
@@ -133,7 +137,8 @@ return (
                     type="textarea"
                     name="comment"
                     onChange={handleChange}
-                    value={showValues.comment} />
+                    value={showValues.comment} 
+                    placeholder="Include any allergies or special requests here for your reservation." />
                 </label>
             </div>
             <button type="submit" id="continue" onClick={handleSubmit}>Continue</button>
